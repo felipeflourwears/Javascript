@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    //Poo
+    /*
+    Clases--Modelo a seguir
+    Objetos--Es una instancia de una clase
+    Atributos--Es una caracteristica o propiedad del objeto
+    Son variables dentro de un metodo
+    Metodos--Son las acciones que un objeto puede realizar--funciones dentro de un objeto
+    */
+    //Objetos uno por uno
+    const animal = {
+      nombre: 'Snoppy',
+      sonar() {
+        console.log("Hago sonidos porque estoy vivo");
+      }
+    }
+
+    const animal2 = {
+      nombre: 'Lola Bunny',
+      sonar() {
+        console.log("Hago sonidos porque estoy vivo");
+      }
+    }
+    console.log(animal);
+    console.log(animal2);
+
+    //Funcion constructora Version constructora 1
+    function Animal(nombre, genero) {
+      this.nombre = nombre;
+      this.genero = genero;
+      this.sonar = function () {
+        console.log("Hago sonidos porque estoy vivo");
+      }
+      this.saludar = function () {
+        console.log(`Hola me llamo ${this.nombre}`);
+      }
+    }
+    const snoppy = new Animal("Snoppy", "Macho");
+    const lolaBunny = new Animal("Lola", "Hembra");
+    console.log(snoppy);
+    console.log(lolaBunny);
+    snoppy.saludar();
+    snoppy.sonar();
+    lolaBunny.saludar();
+    lolaBunny.sonar();
+
+    console.log("Metodos al prototipo no a la función como tal");
+    console.log("Eficiencia");
+    function CAnimal(name, genre) {
+      this.name = name;
+      this.genre = genre;
+    }
+    //Metodos
+    CAnimal.prototype.sound = function () {
+      console.log("Hago sonidos porque estoy vivo");
+    }
+    CAnimal.prototype.gretting = function () {
+      console.log(`Hola me llamo ${this.name}`);
+    }
+    const snoppy1 = new CAnimal("Snoppy", "Macho");
+    const lolaBunny1 = new CAnimal("Lola", "Hembra");
+    console.log(snoppy1);
+    console.log(lolaBunny1);
+    snoppy1.gretting();
+    snoppy1.sound();
+    lolaBunny1.gretting();
+    lolaBunny1.sound();
+
+  </script>
+</body>
+
+</html>

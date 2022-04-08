@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    let a = new String("Hola");
+    console.log(a);
+    //Objeto---->{}
+    const b = {
+
+    }
+    console.log(b);
+
+    const c = new Object();
+    console.log(c);
+
+    //Dentro de un objeto a las variables se les van a llamar atributos/propiedades
+    //Las funciones son métodos
+    const felipe = {
+      nombre: "Luis Fe",
+      apellido: "Flores",
+      edad: 17,
+      pasatiempos: ["correr", "leer", "Dar al cod"],
+      soltero: true,
+      contacto: {
+        email: "A01274880@itesm.mx",
+        twitter: "felipeflourwears",
+        movil: "5565246772",
+      },
+      saludar: function () {
+        console.log("Hello there")
+      },
+      decirMiNombre: function () {
+        console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} years old y mi correo es ${this.contacto.email}`)
+      }
+
+    }
+
+    console.log(felipe["nombre"]);
+    console.log(felipe["apellido"]);
+    console.log(felipe.nombre);
+    console.log(felipe.apellido);
+    console.log(felipe.edad);
+    console.log(felipe.soltero);
+    console.log(felipe.pasatiempos[2]);
+    console.log(felipe.contacto.email)
+    //Para funciones no se usa console.log es directo
+    felipe.saludar();
+    felipe.decirMiNombre();
+    //Listar las propiedades/atributos y meétodos
+    console.log(Object.keys(felipe));
+    //Muestra los valores del objeto
+    console.log(Object.values(felipe));
+    //Verificar si se encuentra algo con nombre u otra palabra
+    console.log(felipe.hasOwnProperty("nombre"));
+    console.log(felipe.hasOwnProperty("nacimiento"));
+
+  </script>
+</body>
+
+</html>

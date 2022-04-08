@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    //Cadenas de texto aka String
+    let nombre = "Felipe";
+    let apellido = "Flores";
+    let saludo = new String("Hello World");
+    let lorem = '       Hello como estas a donde vas JAJAJAJAJA Tenemos que buscar la palabra objeto        '
+    console.log(nombre, apellido, saludo);
+    console.log(
+      nombre.length,
+      apellido.length,//Longitud
+      saludo.length,
+      nombre.toUpperCase(),//Mayuscula todo
+      apellido.toLowerCase(),//Minuscula todo
+      lorem.includes('Hello'),//Buscar palabra True/False
+      lorem.includes('objeto'),
+      //lorem,
+      //lorem.trim(),//trim(); Quitar espacio en blanco al inicio
+      // lorem,
+      lorem.split(" "),//Dividir palabra por palabra
+      lorem.split(",")
+    );
+  </script>
+</body>
+
+</html>

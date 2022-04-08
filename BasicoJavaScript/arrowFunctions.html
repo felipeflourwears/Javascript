@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    const saludar = function () {
+      console.log("Hello world")
+    }
+    saludar();
+    //Arrow Functions
+    console.log("Arroww")
+    const saludarArrow = () => {
+      console.log("Hello world")
+    }
+    saludarArrow();
+
+    console.log("Arroww2")
+    const nombreUser = 'Felipe';
+    const saludarArrow2 = (nombre) => {
+      console.log(`Hello world me llamo ${nombre}`)
+    }
+
+    saludarArrow2(nombreUser);
+    //Función Sumar
+    /*
+    const sumar = function (a, b) {
+      return a + b;
+    }
+    */
+    const sumar = (a, b) => {
+      console.log(`La suma es: ${a + b}`)
+    }
+    sumar(1, 2);
+    //Jonmiircha
+    console.log("Funcion suma");
+
+    const suma = (a, b) => a + b;
+    //suma(2, 3);
+    console.log(suma(4, 4));
+
+    const funcionDeVariasLineas = () => {
+      console.log("Uno");
+      console.log("Dos");
+      console.log("Tres");
+    }
+    funcionDeVariasLineas();
+    //Arreglo
+    const numeros = [1, 2, 3, 4, 5];
+    /*
+    numeros.forEach(function (elemento, index) {
+      console.log(`El elemento ${elemento} esta en la posicion ${index}`)
+    });
+    */
+    numeros.forEach((elemento, index) =>
+      console.log(`${elemento} esta en la posicion ${index}`));
+    /*
+            function perro() {
+              console.log(this);
+            }
+        perro();
+        */
+
+    const perro = {
+      nombre: 'Rubia',
+      //ladrar:function
+      ladrar: () => {
+        console.log(this);
+      }
+    }
+    perro.ladrar();
+  </script>
+</body>
+
+</html>

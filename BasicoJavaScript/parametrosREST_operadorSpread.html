@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    //Parametros REST
+    function sumar(a, b, ...c) {
+      let resultado = a + b;
+      c.forEach(function (n) {
+        resultado += n;
+      });
+      return resultado;
+    }
+    console.log(sumar(1, 2));
+    console.log(sumar(1, 2, 3));
+    console.log(sumar(1, 2, 3, 4));
+    console.log(sumar(1, 2, 3, 4, 5, 7));
+    //Spread operator
+    const arr1 = [1, 2, 3, 4, 5],
+      arr2 = [6, 7, 8, 9, 0];
+    console.log("Imprimiendo arreglos 1 y 2");
+    console.log(arr1, arr2);
+    console.log("Empieza arreglo 3")
+    arr3 = [arr1, arr2];
+    console.log(arr3);
+    console.log("Imprimiendo con Spread Operator")
+    console.log(...arr1, ...arr2)
+
+  </script>
+</body>
+
+</html>

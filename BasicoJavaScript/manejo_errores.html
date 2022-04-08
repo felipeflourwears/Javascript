@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    //Manejo de errores
+    try {
+      console.log("En el try se ejecuta el código a evaluar");
+      noExiste;
+      console.log("Segundo mensaje en el try");
+    } catch (error) {
+      console.log("Catch, captura cualquier error surgido o lanzado en el try");
+      console.log(error);
+    } finally {
+      console.log("El bloque finally se ejecutara siempre al final de un bloque try-catch");
+    }
+
+
+    try {
+      let numero = 'y';
+      if (isNaN(numero)) {
+        throw new Error("El caractér introducido no es un número");
+      }
+      console.log(numero * numero);
+    } catch (error) {
+      console.log(`Se produjo el siguiente error: ${error}`);
+      console.log("Aquiiiiiiiiiiiiiiiiii");
+      console.log(error);
+      console.log("Aquiiiiiii");
+    } finally {
+      console.log("Finally1");
+    }
+
+  </script>
+</body>
+
+</html>

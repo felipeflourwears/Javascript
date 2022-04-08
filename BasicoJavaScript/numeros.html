@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    let a = 2;
+    let b = new Number(1);
+    let c = 7.11;
+    let d = "5.5";
+
+    console.log(a, b);
+    console.log(c.toFixed(1));
+    console.log(c.toFixed(5));//Numero de decimales
+    console.log(parseInt(c));//Devuelve Parte entera
+    console.log(parseFloat(c));//Devuelve parte flotante
+    console.log(typeof c, typeof d);
+    console.log(a + b);
+    //Proceso de casting
+    console.log(c + d);
+    console.log(c + parseInt(d));
+    console.log(c + parseFloat(d));//Trabajar con numeros flotantes
+    //Number para seguir el constructor
+    console.log(c + Number.parseInt(d));
+    console.log(c + Number.parseFloat(d));//Trabajar con numeros flotantes
+  </script>
+</body>
+
+</html>

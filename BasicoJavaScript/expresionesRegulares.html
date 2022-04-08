@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    /*
+        Expresiones Regulares
+           Son una secuencia de caracteres que forma un patrón de búsqueda, principalmente utilizada para la búsqueda de patrones de cadenas de caracteres.
+           https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular
+           https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+       */
+    let cadena = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatem fuga cupiditate dolores saepe, praesentium sit eaque recusandae id sapiente similique, laudantium voluptatum perferendis ea iure ad odio doloremque earum voluptate.';
+    //let expReg = new RegExp("lorem", "ig");
+    let expReg2 = /lorem{3,4}/ig;//Uso de bandera JSJSJSJ
+
+    console.log(expReg2.test(cadena));
+    console.log(expReg2.exec(cadena));
+
+  </script>
+</body>
+
+</html>

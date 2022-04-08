@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    /*
+    1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+    */
+    console.log("Ejercicio 1")
+    //Sin arrow Function
+    //cadena = 'Hello Mundo';
+    //console.log(cadena.length);
+    /*
+    function countCadena(cadena = "") {
+      if (!cadena) {
+        console.warn("No ingresaste nada!!");
+      }
+      else {
+        console.log(`La cadena "${cadena}" tiene un numero de caracteres de: ${cadena.length}`);
+      }
+    }
+    */
+
+    //Arrow Function
+    const contarCadena = (cadena = "") =>
+      (!cadena)
+        ? console.warn("No ingresaste nada de cadena para contar")
+        : console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
+
+    contarCadena();
+    contarCadena("Hola mundo");
+
+
+
+
+
+
+    /*
+    2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola"
+    */
+    //let cadenaTexto = 'Hola mundo';
+    //Mi solucion
+    /*
+    console.log("Ejercicio 2");
+
+    function cadenaRecortada(cadenaTexto, longitud) {
+      for (let i = 0; i < longitud; i++) {
+        element = [];
+        element = cadenaTexto[i];
+        console.log(element);
+      }
+    }
+
+    cadenaRecortada('Hola Mundo', 7);
+*/
+    //Arrow Function
+
+    console.log("Ejercicio 2");
+
+    const recortarCadena = (cadena2 = "", longitud = undefined) =>
+      (!cadena2)
+        ? console.warn("No ingresaste una cadena de texto")
+        : (longitud === undefined)
+          ? console.warn("No ingresaste la longitud paraa recortar el texto")
+          : console.info(cadena2.slice(0, longitud))
+
+    recortarCadena("Hola Mundo", 4);
+    recortarCadena();
+    recortarCadena("Hola Mundo");
+    recortarCadena("", 5);
+
+
+
+
+
+
+    //3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+    console.log("Ejercicio 3");
+    //Mi solucion
+    /*
+    function separarCadena(cad, separar) {
+      edicion = cad.split(separar);
+      console.log(edicion);
+    }
+    separarCadena('Hola que tal', ' ');
+
+*/
+
+
+    //Arrow Function return implicito
+    const cadenaAArreglo = (cadena = "", separador = undefined) =>
+      (!cadena)
+        ? console.warn("No ingresaste una cadena de texto")
+        : (separador === undefined)
+          ? console.warn("No ingresaste el caracter separador")
+          : console.info(cadena.split(separador))
+    cadenaAArreglo('Hola que tal', ' ');
+    cadenaAArreglo();
+    cadenaAArreglo("Hola que tal");
+    cadenaAArreglo("", " ")
+
+
+
+
+    //4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', devolverá Hola Mundo Hola Mundo Hola Mundo.
+    console.log("Ejercicio 4");
+    // Mi solucion
+    /*
+    console.log("Ejercicio 4");
+    function multiplicarCadena(cadena1, numero) {
+      for (let i = 0; i <= numero; i++) {
+        console.log(cadena1);
+      }
+      console.log(cadena1);
+    }
+    multiplicarCadena("Hola Mundo", 3);
+*/
+    const multiplicarTexto = (texto = "", veces = undefined) => {
+      if (!texto) return console.warn("No ingresaste texto");
+      if (veces === undefined) return console.warn("No ingresaste el numero a repetir el texto");
+      if (veces === 0) return console.error("El número de veces no puede ser cero");
+      if (Math.sign(veces) === -1) return console.error("El número no puede ser negativo")
+      for (let i = 1; i <= veces; i++) {
+        console.info(`${texto},${i}`);
+      }
+    }
+    multiplicarTexto("Hola mundo", 3);
+    multiplicarTexto("Hola mundo", 0);
+    multiplicarTexto("Hola mundo", -20);
+  </script>
+</body>
+
+</html>

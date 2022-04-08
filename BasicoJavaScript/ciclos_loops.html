@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+
+    //Ciclos  
+    //while++++++++++++++++++++++
+
+    let contador = 0;
+
+    while (contador < 10) {
+      console.log("while" + contador);
+      contador++;
+    }
+    //do while+++++++++++++++++++++++
+    do {
+      console.log("do while" + contador);
+      contador++;
+    } while (contador < 10);
+
+
+    /*for+++++++++++++++++++++++++++++++++++
+
+    for (inicializacion  de variable; condicion; decremento o incremento)
+    {
+      sentencias que ejecuta el for
+    }
+    */
+
+    for (let i = 0; i < 10; i++) {
+      console.log("for " + i);
+    }
+
+    //Recorriendo un Array++++++++++++++
+    let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+    for (let i = 0; i < numeros.length; i++) {
+      console.log("posicion: " + numeros[i])
+    }
+    //For in+++++++++++++++++++++++++++++
+    const felipe = {
+      nombre: 'Felipe',
+      apellido: 'Flores',
+      edad: 17
+    }
+    for (const propiedad in felipe) {
+      console.log(`Key: ${propiedad}, Value: ${felipe[propiedad]}`)
+    }
+
+    //For of++++++++++++++++++++++++++++++++++++
+    //Arreglos
+    for (const elemento of numeros) {
+      console.log(elemento);
+    }
+    //Cadenas de Texto
+    let cadenaTexto = 'Hola mundo';
+    for (const caracter of cadenaTexto) {
+      console.log(caracter);
+    }
+  </script>
+</body>
+
+</html>

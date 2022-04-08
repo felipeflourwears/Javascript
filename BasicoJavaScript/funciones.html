@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    /*
+        Una función es un bloque de código, autocontenido, que se puede definir una vez y ejecutar en cualquier momento. Opcionalmente, una función puede aceptar parámetros y devolver un valor.
+        Las funciones en JavaScript son objetos, un tipo especial de objetos:
+        Se dice que las funciones son ciudadanos de primera clase porque pueden asignarse a un valor, y pueden pasarse como argumentos y usarse como un valor de retorno.
+        */
+    //Funcion declarada +++++++++++++++++
+    function estoEsUnaFuncion() {
+      console.log("Uno");
+      console.log("Dos");
+      console.log("Tres");
+    }
+    //Invocación de función
+    //estoEsUnaFuncion();
+    estoEsUnaFuncion();
+    //Devolver con return++++++++++++++++
+    function unaFuncionQueDevuelveValor() {
+      console.log("Uno");
+      //return 17; Hasta que se ejecuta si ponemos return
+      console.log("Dos");
+      console.log("Tres");
+      return "La función ha retornado una cadena de texto";
+    }
+    //Invocacion de Funcion
+    let valorFuncion = unaFuncionQueDevuelveValor();
+    console.log(valorFuncion);
+
+    //Funcion pase de parametros+++++++++
+    function saludar(nombre = 'Desconocido', edad = 0) {
+      console.log(`Hola mi nombre es:  ${nombre} y tengo ${edad} years old`);
+    }
+
+    //Invoccación Funcion
+    saludar('Kenai', 17);
+    saludar();
+
+    //Funcion declarada VS Funciones expresadas+++++++
+    funcionDeclarada();
+    function funcionDeclarada() {
+      console.log("Esto es una función declarada, puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada");
+    }
+
+    funcionDeclarada();
+    //Funcion anonima
+    //const funcionExpresada={}=>{}        Arrow Function
+    //funcionExpresada(); -->Error Inicializated Before
+    const funcionExpresada = function () {
+      console.log("Esto es una función expresada, es decir, una funcion que se le ha asignado como valor a una variable, si invocamos esta función antes de su definicion en JS nos dirá... Cannot Acess 'funcionExpresada' before Incialization")
+    }
+    funcionExpresada();
+  </script>
+</body>
+
+</html>

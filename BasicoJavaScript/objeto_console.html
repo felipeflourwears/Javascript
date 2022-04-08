@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    console.log(console);
+    console.error("Esto es un error!!");
+    console.warn("Esto es un aviso");
+    console.info("Esto es un mensaje informativo");
+    console.log("Un registro de lo que ha pasado en nuestra aplicacion");
+
+    let nombre = 'Felipe', apellido = 'Flores', edad = 17;
+    console.log(nombre);
+    console.log(edad);
+    console.log(apellido);
+    console.log(nombre, apellido, edad);
+    console.log(`Hola mi nombre es %s %s ${nombre} y mi apellido es %d ${apellido} y tengo ${edad} años`, nombre, apellido, edad);
+    console.clear();
+    console.log(window);
+    console.log(document);
+    console.dir(window);
+    console.dir(document);
+    console.clear();
+    console.group("Cursos de @joinmircha en Youtube");
+    console.log("Curso de JavaScript");
+    console.log("Curso de Node.js");
+    console.log("Curso de PWAs");
+    console.log("Curso de Flexbox");
+    console.log("Curso de Diseño y Programacion Web");
+    console.groupEnd();
+
+    //Hacer una tablita console.table(variable);
+
+    console.log(console);
+    console.table(Object.entries(console).sort());
+
+    const arr1 = [1, 2, 3, 4, 5];
+    const arr2 = ['A', 'E', 'I', 'O', 'U'];
+    console.table(arr1);
+    console.table(arr2);
+    const perro = {
+      nombre: 'Rubia',
+      raza: 'Pitbull',
+      color: 'Cafe',
+      ciudad: 'HGO'
+    }
+    console.table(perro);
+    console.clear();
+
+    //Console. time();
+    console.time("Cuanto tiempo tarda mi code:");//Alias mismo nombre con timeEnd
+    const arr3 = Array(1000000);
+    for (let i = 0; i < arr3.length; i++) {
+      arr3[i] = i;
+    }
+    console.timeEnd("Cuanto tiempo tarda mi code:");//Alias mismo nombre con console.time();
+    //console.log(arr3);
+    console.clear();
+    for (let i = 0; i <= 100; i++) {
+      console.count("Etiqueta");
+      console.log(i);
+    }
+    console.clear();
+    let x = 3,
+      y = 2,
+      pruebaxy = 'Se espera que x sea menor que y';
+    console.assert(x < y, { x, y, pruebaxy })
+
+  </script>
+</body>
+
+</html>

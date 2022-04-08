@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    //Clase Animal
+    class CAnimal {
+      constructor(nombre, genero) {
+        //Atributos
+        this.nombre = nombre;
+        this.genero = genero;
+      }
+      //Métodos
+      sonar() {
+        console.log("Hago sonidos por que estoy vivo");
+      }
+      saludar() {
+        console.log(`Hola me llamo ${this.nombre}`);
+      }
+    }
+
+    class CPerro extends CAnimal {
+      constructor(nombre, genero, size, raza) {
+        //Super es un metodo para traer los atributos del padre al hijo, por tanto se hace se menciona
+        super(nombre, genero);
+        this.size = size;
+        this.raza = null;
+      }
+      sonar() {
+        console.log("Soy un perro y mi sonido es un ladrido!!!");
+      }
+      ladrar() {
+        console.log("Guaaaa Guaaaa Wuaaaapo");
+      }
+      //Metodo estatico
+      //Sin necesidad la clase se puede ejcutar
+      static queEres() {
+        console.log("Somos animales mamiferos");
+      }
+      //Setters and Getters
+      //Establecer y obtener valores de los atributos
+      get getRaza() {
+        return this.raza;
+      }
+      set setRaza(raza) {
+        this.raza = raza;
+      }
+
+    }
+
+    CPerro.queEres();
+
+    const mimi = new CAnimal("Mimi", "Hembra");
+    const scobby = new CPerro("Scooby", "Macho", "Grande");
+    console.log(mimi);
+    mimi.saludar();
+    mimi.sonar();
+    console.log(scobby);
+    scobby.saludar();
+    scobby.sonar();
+    scobby.ladrar();
+
+    console.log("Setters and Getters");
+    console.log(scobby.getRaza);
+    scobby.setRaza = 'Gran Danes';
+    console.log(scobby.getRaza);
+  </script>
+</body>
+
+</html>
