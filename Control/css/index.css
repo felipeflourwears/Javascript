@@ -1,0 +1,41 @@
+.botones {
+  border: 3px solid #000;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  box-shadow: 2px 2px 2px #000;
+}
+#red {
+  background: rgb(197, 8, 2);
+}
+#green {
+  background: rgb(25, 149, 9);
+}
+
+#blue {
+  background: rgb(4, 4, 250);
+}
+#magenta {
+  background: rgb(219, 134, 187);
+}
+
+#purple {
+  background: rgb(163, 5, 139);
+}
+
+#cyan {
+  background: rgb(83, 219, 231);
+}
+.buttonCol{
+  color: white;
+}
+.four {
+  display: flex;
+  justify-content: space-between; /* Alinea los elementos con espacio entre ellos */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola fila */
+}
+
+.four form {
+  flex: 0 0 calc(25% - 10px); /* Establece el ancho para que haya 4 elementos en una fila */
+  margin-bottom: 10px; /* Añade un margen inferior para separar los elementos */
+}
